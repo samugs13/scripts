@@ -1,11 +1,10 @@
 #!/usr/bin/bash
 
-#I use this script to play media content in my TV.
-
-r=$(echo -e ":b   PC\n:p   HDMI\n:h   Duplicar pantalla" | dmenu -p "Entrada:" -c -l 3 -h -1 -sb "#ffc978")
+r=$(echo -e ":b   PC\n:p   HDMI\n:h   Duplicar pantalla\n:g   Multimonitor" | dmenu -p "Layout:" -c -l 4 -h -1 -sb "#e5c07b")
 
 case "$r" in
      ":b   PC") xrandr --output HDMI-1 --off --output eDP-1 --mode 1920x1080 --pos 0x0 --rotate normal ;;
      ":p   HDMI") xrandr --output eDP-1 --off --output HDMI-1 --mode 1920x1080 --pos 0x0 --rotate normal ;;
      ":h   Duplicar pantalla") xrandr --output HDMI-1 --mode 1920x1080 --pos 0x0 --rotate normal --output eDP-1 --mode 1920x1080 --pos 0x0 --rotate normal ;;
+     ":g   Multimonitor") xrandr --output HDMI-1 --mode 1920x1080 --primary && xrandr --output eDP-1 --mode 1920x1080 --rate 75 --noprimary --right-of HDMI-1 && qtile cmd-obj -o cmd -f restart ;;
 esac
