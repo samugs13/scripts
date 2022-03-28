@@ -9,7 +9,7 @@ Scripts I use on my personal Linux laptop
 </ul>
 
 ### Preview:
-![scripts](https://user-images.githubusercontent.com/78796980/160442764-13139c2d-ea1f-48be-ab88-bd6030198c36.gif)
+https://user-images.githubusercontent.com/78796980/160442924-8bc14796-691b-4fd0-bd15-2ecee7c2a3fb.mp4
 
 My dmenu configuration is available [here](https://github.com/samugs13/dmenu)
 
