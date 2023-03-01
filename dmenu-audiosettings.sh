@@ -1,5 +1,4 @@
 #!/usr/bin/sh
-# I use this script to listen to media content in my TV.
 # See available list cards with pactl (pactl list cards | less)
 
 opt1="I/O: Analógico"
